@@ -1,59 +1,98 @@
-Input Files
-Data/Input/Input.xlsx
-	- List the reference ids in the input file
-	- Rows with "Success" Status will not be processed
+# PHILGEPS Bid Notice Abstraction and Extraction Automation
 
-Output File
-Data/Output/Output.xlsx
-	- Every Transaction is appended in the output
+**Project Type:** Internship Project  
+**Organization:** Actimai Philippines  
+**Automation Platform:** UiPath  
+**Framework:** Robotic Enterprise Framework (REFramework)
 
+## Overview
 
+This project involved a UiPath-based automation workflow for extracting bid notice information from the Philippine Government Electronic Procurement System (PHILGEPS) website.
 
+The automation uses browser automation, data extraction, and validation techniques to streamline the collection and processing of bid notice information.
 
+The workflow is built using UiPath's Robotic Enterprise Framework (REFramework), which provides a structured approach to transaction processing, logging, exception handling, and recovery.
 
+## My Contributions
 
+As an intern, I assisted with the automation workflow and related tasks, including:
 
+- Supporting bid notice information extraction from PHILGEPS.
+- Working with UiPath-based browser automation processes.
+- Assisting with data extraction and validation.
+- Supporting information accuracy and consistency checks.
 
+## Automation Framework
 
+The project uses the **UiPath Robotic Enterprise Framework (REFramework)**, built on top of the Transactional Business Process template.
 
+Key framework features include:
 
+- State Machine-based automation structure.
+- Logging, exception handling, and recovery.
+- Configuration management through `Config.xlsx`.
+- Credential management through Orchestrator Assets and Windows Credential Manager.
+- Transaction retrieval and status updates.
+- Screenshots captured during system exceptions.
 
-### Documentation is included in the Documentation folder ###
+## Input and Output Files
 
+### Input File
 
-### REFrameWork Template ###
-**Robotic Enterprise Framework**
+`Data/Input/Input.xlsx`
 
-* Built on top of *Transactional Business Process* template
-* Uses *State Machine* layout for the phases of automation project
-* Offers high level logging, exception handling and recovery
-* Keeps external settings in *Config.xlsx* file and Orchestrator assets
-* Pulls credentials from Orchestrator assets and *Windows Credential Manager*
-* Gets transaction data from Orchestrator queue and updates back status
-* Takes screenshots in case of system exceptions
+- Contains the reference IDs to be processed.
+- Records with a `Success` status are skipped and will not be processed again.
 
+### Output File
 
-### How It Works ###
+`Data/Output/Output.xlsx`
 
-1. **INITIALIZE PROCESS**
- + ./Framework/*InitiAllSettings* - Load configuration data from Config.xlsx file and from assets
- + ./Framework/*GetAppCredential* - Retrieve credentials from Orchestrator assets or local Windows Credential Manager
- + ./Framework/*InitiAllApplications* - Open and login to applications used throughout the process
+- Stores the results of processed transactions.
+- Every transaction is appended to the output file.
 
-2. **GET TRANSACTION DATA**
- + ./Framework/*GetTransactionData* - Fetches transactions from an Orchestrator queue defined by Config("OrchestratorQueueName") or any other configured data source
+## Workflow Process
 
-3. **PROCESS TRANSACTION**
- + *Process* - Process trasaction and invoke other workflows related to the process being automated 
- + ./Framework/*SetTransactionStatus* - Updates the status of the processed transaction (Orchestrator transactions by default): Success, Business Rule Exception or System Exception
+The automation follows four major phases:
 
-4. **END PROCESS**
- + ./Framework/*CloseAllApplications* - Logs out and closes applications used throughout the process
+1. **Initialize Process**
+   - Loads configuration settings.
+   - Retrieves application credentials.
+   - Opens and logs in to the required applications.
 
+2. **Get Transaction Data**
+   - Retrieves transactions from the configured Orchestrator Queue or another configured data source.
 
-### For New Project ###
+3. **Process Transaction**
+   - Executes the transaction-specific workflow.
+   - Updates transaction status as Success, Business Rule Exception, or System Exception.
 
-1. Check the Config.xlsx file and add/customize any required fields and values
-2. Implement InitiAllApplications.xaml and CloseAllApplicatoins.xaml workflows, linking them in the Config.xlsx fields
-3. Implement GetTransactionData.xaml and SetTransactionStatus.xaml according to the transaction type being used (Orchestrator queues by default)
-4. Implement Process.xaml workflow and invoke other workflows related to the process being automated
+4. **End Process**
+   - Logs out and closes the applications used during execution.
+
+## Technologies and Concepts
+
+- UiPath Studio
+- Robotic Enterprise Framework (REFramework)
+- RPA (Robotic Process Automation)
+- Browser Automation
+- Data Extraction
+- Excel Data Processing
+- Data Validation
+- Exception Handling
+- Transaction Processing
+
+## Project Scope
+
+This was completed as part of my internship at Actimai Philippines. My involvement focused on assisting with the automation workflow and related extraction and validation tasks.
+
+The framework structure and core REFramework implementation were based on the automation engineer's existing project.
+
+## Documentation
+
+Additional project documentation is included in the `Documentation` folder.
+
+## Security Notes
+
+Sensitive credentials, private data, and proprietary implementation details are excluded from this repository.
+
