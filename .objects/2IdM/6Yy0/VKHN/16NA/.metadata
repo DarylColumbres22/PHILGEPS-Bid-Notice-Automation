@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Pre-bid Conference",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "16NAdOn5cEmgj3S6mhfp4A",
+  "Reference": "nQCovJDBykmlKgT0_F8HJQ/16NAdOn5cEmgj3S6mhfp4A",
+  "ParentRef": "nQCovJDBykmlKgT0_F8HJQ/VKHNB1Tk8EqooRs-orxCfQ",
+  "Created": "2026-03-09T09:41:57.5291549Z",
+  "Updated": "2026-03-09T09:41:57.5291549Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Av1qEx9QQEqHS2VwYfjs4A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" DesignTimeRectangle="98, 585, 115, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='Table10' tableRow='5' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Pre-bid*' innertext='Pre-bid*' /&gt;" Guid="3820efe2-a37f-449d-85df-0dd6133d5332" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="3c314e0375c1c6abb487e01ec5729939.jpg" xmlns="">0M1yqp0uBgEKf3JWSEYmAgg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckElement</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,21 @@
+Framework/CloseAllApplications.xaml|639087108758666691
+Framework/KillAllProcesses.xaml|639087108758846621
+Framework/InitAllSettings.xaml|639087108758806565
+Framework/InitAllApplications.xaml|639087108758776635
+Framework/GetTransactionData.xaml|639087108758716617
+Framework/Process.xaml|639087108758896646
+Framework/TakeScreenshot.xaml|639087108759016587
+Framework/RetryCurrentTransaction.xaml|639087108758936605
+Framework/SetTransactionStatus.xaml|639087108758976616
+Process/Extract Details.xaml|639087108759096566
+Main.xaml|639087905378378707
+Framework/KillAllProcesses.xaml|639087108758846621
+Framework/RetryCurrentTransaction.xaml|639087108758936605
+Framework/SetTransactionStatus.xaml|639087108758976616
+Framework/Process.xaml|639087108758896646
+Framework/InitAllSettings.xaml|639087108758806565
+Framework/TakeScreenshot.xaml|639087108759016587
+Framework/CloseAllApplications.xaml|639087108758666691
+Framework/InitAllApplications.xaml|639087108758776635
+Framework/GetTransactionData.xaml|639087108758716617
+Process/Extract Details.xaml|639087108759096566

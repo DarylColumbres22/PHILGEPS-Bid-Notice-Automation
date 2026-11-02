@@ -1,0 +1,285 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Extract_Details" this:Extract_Details.in_ReferenceId="12826481" this:Extract_Details.in_PhilGepsUrl="https://notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=@ReferenceId@" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_dtOutput" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_ReferenceId" Type="InArgument(x:String)" />
+    <x:Property Name="in_PhilGepsUrl" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Extract_Details_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Extract_Details" sap:VirtualizedContainerService.HintSize="768.0000000000001,3138.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="516.8,112.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[in_PhilGepsUrl]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[in_PhilGepsUrl.Replace("@ReferenceId@",in_ReferenceId)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Chrome SplashBidNoticeAbstractUI" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="516.8,3002.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsIncognito="False" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" Version="V2" WebDriverMode="[UiPath.UIAutomationNext.Enums.NWebDriverMode.Headless]">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,2796.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="procurement" />
+              <Variable x:TypeArguments="x:String" Name="title" />
+              <Variable x:TypeArguments="x:String" Name="areaOfDelivery" />
+              <Variable x:TypeArguments="x:String" Name="procurementMode" />
+              <Variable x:TypeArguments="x:String" Name="classification" />
+              <Variable x:TypeArguments="x:String" Name="category" />
+              <Variable x:TypeArguments="x:String" Name="approvedBudget" />
+              <Variable x:TypeArguments="x:String" Name="deliveryPeriod" />
+              <Variable x:TypeArguments="x:String" Name="status" />
+              <Variable x:TypeArguments="x:String" Name="datePublished" />
+              <Variable x:TypeArguments="x:String" Name="lastUpdateTime" />
+              <Variable x:TypeArguments="x:String" Name="closingDate" />
+              <Variable x:TypeArguments="x:String" Name="solicitation" />
+              <Variable x:TypeArguments="x:String" Name="maintitle" />
+              <Variable x:TypeArguments="x:String" Name="prebid" />
+              <Variable x:TypeArguments="x:Boolean" Name="isPrebid" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'Procuring Entity'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[procurement]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="d11ba411-bdd5-40a5-9287-fec74430ba31" CvType="AnyWordGroup" DesignTimeRectangle="803, 575, 127, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Procuring Entity' tableCol='2' /&gt;" Guid="af85827a-987a-47bb-80e3-f3959fc2c6d6" InformativeScreenshot="7d37c5d8c35297b1b884752ee26341b4.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Title'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[title]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="7fe34e03-ae81-4989-91b1-e9fe17a2f2e7" DesignTimeRectangle="803, 598, 183, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Title' tableCol='2' /&gt;" Guid="f85aa2fd-750a-4600-9792-dbe0e1b3b711" InformativeScreenshot="9069b992b817df1d7abf56c9bb620e28.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Area of Delivery'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[areaOfDelivery]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="7fe34e03-ae81-4989-91b1-e9fe17a2f2e7" DesignTimeRectangle="803, 598, 183, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Area of Delivery' tableCol='2' /&gt;" Guid="f85aa2fd-750a-4600-9792-dbe0e1b3b711" InformativeScreenshot="9069b992b817df1d7abf56c9bb620e28.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Procurement Mode'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[procurementMode]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="7fe34e03-ae81-4989-91b1-e9fe17a2f2e7" DesignTimeRectangle="959, 695, 75, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Procurement Mode:' tableCol='2' /&gt;" Guid="f85aa2fd-750a-4600-9792-dbe0e1b3b711" InformativeScreenshot="6fb030eb9cfa7252a903ae553594044b.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Classification'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[classification]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="7fe34e03-ae81-4989-91b1-e9fe17a2f2e7" DesignTimeRectangle="803, 598, 183, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Classification:' tableCol='2' /&gt;" Guid="f85aa2fd-750a-4600-9792-dbe0e1b3b711" InformativeScreenshot="9069b992b817df1d7abf56c9bb620e28.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Category'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[category]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="7fe34e03-ae81-4989-91b1-e9fe17a2f2e7" DesignTimeRectangle="803, 598, 183, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Category:' tableCol='2' /&gt;" Guid="f85aa2fd-750a-4600-9792-dbe0e1b3b711" InformativeScreenshot="9069b992b817df1d7abf56c9bb620e28.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Approved Budget'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" ScrapingOptions="None" TextString="[approvedBudget]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="82546089-a37b-4057-8d2f-81b6149569f9" DesignTimeRectangle="537, 625, 422, 27" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tableCol='2' rowName='Approved Budget for the Contract:' /&gt;" Guid="02b09b32-995b-46df-826d-7f805511d14e" InformativeScreenshot="471557d5d29151d6914141b32ab4bb61.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Delivery Period'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[deliveryPeriod]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="7fe34e03-ae81-4989-91b1-e9fe17a2f2e7" DesignTimeRectangle="803, 598, 183, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Delivery Period:' tableCol='2' /&gt;" Guid="f85aa2fd-750a-4600-9792-dbe0e1b3b711" InformativeScreenshot="9069b992b817df1d7abf56c9bb620e28.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Status'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[status]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="875e6774-3fe8-48bc-b4f1-ae543efde93d" CvType="AnyWordGroup" DesignTimeRectangle="2487, 646, 765, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='Table7' tableRow='5' tag='TABLE' /&gt;&lt;webctrl tag='P' /&gt;" Guid="a8fbca8b-1164-4bc2-8c2c-9b549d163aa8" InformativeScreenshot="d2116e6422a7527f3945b0c5347786ba.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="875e6774-3fe8-48bc-b4f1-ae543efde93d" CvTextArea="1720, 647, 40, 11" CvTextArgument="Status" CvType="Text" DesignTimeRectangle="1721, 645, 765, 48" FuzzySelectorArgument="&lt;webctrl tag='TD' colName='Status' check:innerText='Status' /&gt;" Guid="1982a3d5-b2ee-49e4-a0f9-e6724b1ef2cd" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Date Published'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[datePublished]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="7fe34e03-ae81-4989-91b1-e9fe17a2f2e7" DesignTimeRectangle="803, 598, 183, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Date Published' tableCol='2' /&gt;" Guid="f85aa2fd-750a-4600-9792-dbe0e1b3b711" InformativeScreenshot="9069b992b817df1d7abf56c9bb620e28.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Last Update Time'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[lastUpdateTime]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="7fe34e03-ae81-4989-91b1-e9fe17a2f2e7" DesignTimeRectangle="803, 598, 183, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Last Updated / Time' tableCol='2' /&gt;" Guid="f85aa2fd-750a-4600-9792-dbe0e1b3b711" InformativeScreenshot="9069b992b817df1d7abf56c9bb620e28.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Closing Date / Time'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[closingDate]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="7fe34e03-ae81-4989-91b1-e9fe17a2f2e7" DesignTimeRectangle="803, 598, 183, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' rowName='*Closing Date / Time' tableCol='2' /&gt;" Guid="f85aa2fd-750a-4600-9792-dbe0e1b3b711" InformativeScreenshot="9069b992b817df1d7abf56c9bb620e28.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Solicitaion'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[solicitation]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="80a82352-00c0-4799-877a-4d6d47df57d1" CvType="AnyWordGroup" DesignTimeRectangle="409, 540, 130, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='Table15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='lblDisplaySolNumber' rowName='Solicitation Number:' /&gt;" Guid="9b67bbbb-1aa5-4a33-a366-16f97dcc9eb7" InformativeScreenshot="e6374be9bef8ebef7ae54e19ad9c841c.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'MainTitle'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[maintitle]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" CVScreenId="c6fa08d2-1d2e-4967-b56b-c34cdbdc685a" DesignTimeRectangle="199, 409, 258, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='Table6' tag='TABLE' /&gt;&lt;webctrl id='lblHeader' /&gt;" Guid="3c99a013-cfbf-41ad-92fa-276e1414e4d9" InformativeScreenshot="81c234794580232adcf563dcd7e932b7.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NCheckElement ContinueOnError="True" DelayBefore="0" DisplayName="Check Element 'Pre-bid Conference'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="449.6,138.4" sap2010:WorkflowViewState.IdRef="NCheckElement_1" Result="[isPrebid]" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" Timeout="1" Version="V5">
+              <uix:NCheckElement.Target>
+                <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" ContentHash="Av1qEx9QQEqHS2VwYfjs4A" DesignTimeRectangle="98, 585, 115, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='Table10' tableRow='5' tag='TABLE' /&gt;&lt;webctrl tag='SPAN' aaname='Pre-bid*' innertext='Pre-bid*' /&gt;" Guid="3820efe2-a37f-449d-85df-0dd6133d5332" InformativeScreenshot="3c314e0375c1c6abb487e01ec5729939.jpg" Reference="nQCovJDBykmlKgT0_F8HJQ/16NAdOn5cEmgj3S6mhfp4A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NCheckElement.Target>
+            </uix:NCheckElement>
+            <If Condition="[isPrebid]" sap:VirtualizedContainerService.HintSize="449.6,449.6" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Pre-Bid'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,129.6" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="7386541e-d8fd-4b15-a9e4-fb4fceea7f66" TextString="[prebid]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="notices.philgeps.gov.ph/GEPSNONPILOT/Tender/SplashBidNoticeAbstractUI.aspx" DesignTimeRectangle="103, 634, 64, 13" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='Table18' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='lblPreBidDate' tag='SPAN' /&gt;" Guid="8eb7bb1b-961c-4e6b-84eb-29271e2758d1" InformativeScreenshot="6614dfc3b943ddb7200985f6b1ee8f0a.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{datePublished,in_ReferenceId,category,closingDate,procurement,title,areaOfDelivery,solicitation,procurementMode,approvedBudget,prebid,maintitle,classification,deliveryPeriod,status,lastUpdateTime}]" DataTable="[io_dtOutput]" DisplayName="Add Data Row Output" sap:VirtualizedContainerService.HintSize="449.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 3456, 1408" BrowserType="Chrome" ContentHash="uVeAzTKWOEiqU6-evVk9hg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA+qSURBVGhDvZcJVJRXlsdLIQYXVoFip6gqoCgolmK3oChAEVABzdI6PYpLJybjdtSYSTSAdo9j2gDFpiTK5pJ0T0zUmD4zMS6ogBkXXOJEPYKCiUvnGCkw6Y5a5btz7v0WvqoYO8nJzDvnf+59973v+373ffe9r0om+xWaq7OTx0w/r7l/iAg2t+pUe05PiO3rzYy3fJ2TBF/nJEOvMcFyKj2mb48+sv0P4cHmyT4eJUEuoxQjRo50Hztu3BxfuXxvYFDQ5ZDQ0HuowKCgS75y+Z6x48bNxjmOz/tVGkIvDJYv2xMf0S6AclbiZwt9Tn/NTiR9kamHVbEapg4Le+Tn7w9e3t7g4+sL/gEBJPS9xo8HHAsNDf3ey8urZuTIkXJHhl/UEHyVIqCiJzNu4OvsREZgJr29RfBszkpjqF0pMSxapRRBJxgMsHjJEjCbzdDS0gLNLS1QXV0NS5YuBUNGhphYqEIxNHr06GJHnp/VVin8K3rE0hBWdBiOYll6Jqz07Sw9u52VQP2bWXr4fZwGwpRKGO/tDUnJyQR94sQJuHr1KvT29sKlS5dI6GMMx6rNZkhMSgJvHx9QhIUxN3f3N2Qy2QhHtic2rNdDSdFncTVJCOhgBVCypkS4bdLzwjmJ0JwUjQAE/+xzz8HRo0ehp6cHjh07Bhs3boR58+fD9OnTSfMXLIDKykro6OigOUeOHIHpM2bQtbgAY8eOnefI+KPtebl36ZWMOIsIaNIT0DCoFJZXlh5uoYwJ7JYxnu1L0YGaX/nnf/MbONPdDRcuXABzTQ0k6PVUJq5ubjB6zBgS+hjDt7Rp0yaae/r0aZjxzDPCm3jo4uIyyZH1B+2VUL8KAVYAE1YX4Tgbz9ksbpzgjfHsVlYCb/UwOyqcNmRqWhqtKgKVl5cTTEBgII2lT5gA8+fPp9VHH2PCPlm7bh1dg28tKSlJiO915LVrK0P8KqSrK8BwK8v7xgTq38zkgdE3JpBozJgAnxvicAOCj1wO9fX10HPlCllvX18qKbmfH5WPsBeE2sdkcAznYBINDQ1UTrgnsB+qUDAnJyd/R25qz8vHl94iKEk58H0OlAfkLQcdj4lwfkYcE2xDQhSBGLOy4NSpU1TzuCmFlc/JzYVz587B8ePHYfXq1ST0MZaTk0OrjXOxnPDtYXJ4cuG1rq6uLzmy04a9lK4bIMDMeIYQCCpdVQ46ngfl7A3BpyTi4UYmpxKNmuGZvnz5clrdtyoraS+o1Wo668srKujUeXHhQqp9FPoYKysrozk4F8sNN/bV3l5YvHgxxeV+fp848stOpGr77FYRgdDngaSWfEMsE2BFZaDiyEYruRKoq6uD3p4emDdvHn24VGo1JbJhwwa4cuUK5BcUEBSqoLCQYjiGc3AuxrGsMLGq6moqwZDQ0EE7+BXB8gpxFR3A7QERTiJMwiH2FW/VCgWVwLZt2+DixYtQVFxMq6lUqQhqwYIFBIUfMSwtVGtrK8Vwb+AclUpF1xSXlNB3orm5GfwCAjCB+yL8KO8xireWm4ZX0xDLvjLEcgmIQMM+jpEVNEHHbuQbYKi5Ee6fOQXWWzcBW3hEBNVxa1sbXJIkgOd5cEgIbVIEvnbtGh2VKPTxi4ybH+fgXLwGr6UEWlronsEhIcNvQPGSvs3YVgJnCpPF1bMH5IENsbwEPw5uP5tP0I9rBoOBSgjPfOmqIriQBCa5atUq2L59O2nlK6+AOjxcTBAlLSHhJAoMDLzMrf74MQr9ezMg8b0Z8PK/5YlgX07QOUBz+lJQegyz1PwRHt27Zwd9y8LgL+cewNb2+5A343f08CVLltAmrqyqotXEusZVxBr3lcvpVNFERZHQxxiOYfnhXLymqqqKEsDfTnhP/BVLCXgZQ+bGv1vMEt4tAf270+E/n0vlAXWM7ARBOoJG/3p6DBts2mwH/vHZB/BS23eQXDEIKWuHyEY/30DHaEZmJh2BnZ2dkJySAuPc3MguXbqUavrAgQPQ1dVFQr+pqQn+ZdEi+lKPc3WF5ORkuhbvgT/y7I5Rzfrss/E7ixnCYyJzNuZzsDz09TSE1sF1Qek6GKh5U7Lij2BhKweetHYQktcOQhL6FYMQv+yM+DHCkwg/ZPhRWrlyJZw8eRL6+/vh888/h08//RR27dpFwgT+58IFGvvss88oyTr8CPb0QG1tLd0L7+nk5KSg8onbUcTidhazhJ0lEL+zBNA2LDSw62nR7Hp6DAGj38/3b5TkMaFsEH6a+Z4IjEosHxb21RNm0YqlpKbSx6i7uxvOnz8P+/fvh+UrVoDJZIKIyEg8VWjjajQayJ04EV599VVKDOfi5sZr8R54rwXPqMBj7EgPmVuivDh+RzE4ytBcBF8Ydaw/FcExiRhA25+qZd/+Za+4+i+2fAuJ5RaJBiGxYhD0kljc0m4IU0fCeB8f+iWKMPhV3rFjByQkJNDHy9PLi1YW5eHpSWWji42FtrY2motJ4w9B3BcREUr48mMNzClwnysL+Kdoc9z2IuBUTBYTiN0+jb25JFOE7kuNhr60aLgxPU+E33f2AYE+XlwSgrSzWod/Tj/7LP2kuHz5MtU0ltQLL74IJSUlUFRUBL974QWorauj8sFjE/fFzFmz6Fq8x583qMF6XANVS31rZKrX0ttjtxWBbts0Jk1Ct20qw/iJSfFA8LzuVm8QE5hSNQQJZZZhlUv8xyhy2r+LZzpuypqaGoIU/sAgLH7ssI/Cld+0eTOkpaeL/wUql6vA2hXJrF0a+HBD0F5ZVGVuX+y2afA46dqmslnrc1lfchS7lhzF+lK08H33SYK/fNsG8WUWEsIJ/pM1ANrS3RAWobP7S7lo0SI6IvFrjGWFb2TFypVgys4Wj9gYrRL21yN8OEPZuiLg6gdhfbKYtikstm0aoHSkqeRjHH2M7StOoASupWjFM//wxYcQVzbA6Q3elg0QKGelMWncArrlX4A6YzaVg+Of+sCgIDp2+R9rNGfedCVc/0gN1k41s3aGk7V1qeHOf4VZZLrWqRDTOoWh/THl1uXDtSQNu5oYyYTyaTz8PcS+MSBKgLWLPcanZHlf+8IBiCzaADlFc+hntTY6GqIiFWBKD4PSEiWrWqGEriYVIKy1U8lsnSqwdaqpT36XGmTRrYUshpKQagrEtEwhP7qlkGlbClnNgjS4mqgRE9h86O92sIJ0T+g7jgkxvJfQEHQYVpCSU5cKx8HaEcZsXUryZVENky3algIWjcAtUwB9tNHNhdTHuLa5gKU05sN5gxast27Qg/aeuQ+6NQMQs+YuWQQhK/UdrDA3xmHeoYsPefohgkJYa4eCWTvDAMUlEEYxspxPMZl6o6kPIVFRzQVMBG8uFIVx1GvLDPD30yfoWTctjwiIEwf3eDmOOfbvwqVbNronG/yMoGwdCgIcVgjD2HA8hKF63w/skwUt0u/RNhWClofVNhXY+VFN+QxF8aZCOP3BFvF1z20agug1dyF6zQBvf77yKgfF+z26ug6sHaFgc5C1IwSsx4KZtQMVIvYP1snbZX4ztWYOjoOlZPg+SrN1Mosim89QM83F4gP3dD8A7eq7oF3DazUHRbF/IGHenu774v1sJ9OZtSOI2QgQbRBCIyz1OcurIxiqFrvXyNzTA+ciJIFuzQcUJbNVEBfjxPVP3DovPrR06z2IWn1XFEJFrf5GBJWO2c+5C6Vbh8T7sK93CaC8Apn1WADjbBDYKIb9ILB1cCrKcCmWOY129iC4LfkQuSWPktCQP5mhlQpjOCf3T6Vw78F39OAbA49g4kYLaFZ/Q+Ca1zk77N8VYzhHiE18ywI3LI/oHvfufwe2k6kIy4Ee9ScfrU1qSQH8uD9TyJ0U9HM6eGVyu2bLZB50MkS+k8eo/44Q4+LU52PrjzeKq4dJzNk6RHA/EJ+AVLO3DtE1Qhu8so6HQjg/RjrmjzFJ34/ZjvkDCuPdTd5nxb+THrkhyyLfQXBOEW9PYsP9PLs4jb3NxepP7xAhsO0+fR9y/jgAEa9/A5GvfyNaQbO3DMJuSc1j+/B8Mwy0Y3mIwBLJme2YtM/JdtQPZk92KRUTGOni7KE2Z1vC357EUATIQ6KN4IVjaKUxfBNYAtJ26aYNDnzxAOoO/A3qD/4Ndp/+3m7Fsd27/y2s72qEXfuiwHrUF1cZgXlfDjbyBfmC7agvWI/4MBSOieUjNK+pygoBKqIxD8IbJ7KIxklAejsP1HxfvXkiJYH9cH48a+dv2YeX99sBPqn9981zkLXjtyyrycgQTtQRb0YS+z4kHh6sR8ZjAtD8r66tdvDY8C0oK00DAlj45klAlvyJdn2EFvs4xvdNO/4Z1nc2EuBX9/4qAqOPsbqT2yGxpYS7dvNE6D8QQEAcmDcmYO+3o283RgqRj7RffaF5TlFWqHlY1eZcJoKTFcT1VZtwnN6I6GNcvYkTxgTLjUtjOWzVe3qwHvFitqMI5oWgPLQn76O87G27Jyuf61LhyG3Xgl9LPStACBLg1ZtyeUnHHfvSmDA/F5QNOQSPvr7RBP2f+oGNhyLAdoT0AhvBYt+DUazdE6xHPMn2/sntmiPvD5qzl4si7C2jRdWQC4LwoVKLMJzNZgIYWk7ZNCbIsa9qyAHz+xqGQDYC82AP292ZleTBx9wZ2oeH3SiGuvOxm0XxY6Xj2FxT/OaG1WczlPBQTrmgqs/h1JADyvocGJ7DjWFfjNdzc6TXZbxj4KGG4TjfnQd2B6toXZn1sBvZYsNTJY6cT2xeBcq1+PDHKazOJEKK8brsH8wTpKgzMbwG9f5uJQcmALa7wUPecrDjmPWwKybF6bArlM15eq0j309qHgWKCgKry+YhOIsSwBS1Jqasw6SySeI43xcsamZzEgFJZWtHWPuY9fBYRvHD46C89Kknb9p/1MbEeJeEvJlhUdSaRJCw2mwIrc1iitoshr4QC6s1URyFfbxG2u//xIvgEMxeY8F6eAxD+/DQaGY9NJrd2TfGMmey81xHnl/UnD1dFEHlqX0EWJPFFDW8rTVxkDVZLLTGyIQxUeK4ka3YFsPBEegYQEgC52KcPTQaLZza4nJWIR/x0zbsz2nu+aEVAlhIjZEparIINMSMPmcFP9TMjaEMm9Kg/xNPXGVOPKj1kIsIbT30NLvz0ShL2RznX1bvP7Xh2xg/K7IVQRFSquCqTEog2JxJYyFmI8W3/oeCAK2HXBCa08GnRf/OR08NlM1xqvAYO8LD8Xn/Zw0TGZfsN9f/lcSzCE7A1UZRXMwIExrSEH5YCH5wFLMeHAUHq59qX/yM07L/V/DHNUwGN7tHidLs87KuPeCNlD5MIqgyg/15VyDc+cjZcuVd574P1jnvqXzZyTx78ojSXwv6fwGa6d+Pb+9pxAAAAABJRU5ErkJggg==" InformativeScreenshot="68480edaf80bcd6f3700304930d83a9e.jpg" Reference="nQCovJDBykmlKgT0_F8HJQ/VKHNB1Tk8EqooRs-orxCfQ" Selector="&lt;html app='chrome.exe' title='SplashBidNoticeAbstractUI' /&gt;" Url="[in_PhilGepsUrl]" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

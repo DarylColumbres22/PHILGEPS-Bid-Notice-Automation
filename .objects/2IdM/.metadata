@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome SplashBidNoticeAbstractUI",
+  "Type": "App",
+  "Id": "2IdM2yy3K0a6WXfIQVkZQg",
+  "Reference": "nQCovJDBykmlKgT0_F8HJQ/2IdM2yy3K0a6WXfIQVkZQg",
+  "Created": "2026-03-09T09:41:57.0368225Z",
+  "Updated": "2026-03-09T09:41:57.0368225Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
